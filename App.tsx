@@ -1,8 +1,7 @@
 import React from 'react';
-import {View} from 'react-native';
 
 import {AppContainer} from 'src/components';
-import ReactNativeScreen from 'src/ReactNativeScreen/ReactNativeScreen';
+import ReactNativeScreen from 'src/ReactNativeScrollView';
 
 const App = () => {
   return (
