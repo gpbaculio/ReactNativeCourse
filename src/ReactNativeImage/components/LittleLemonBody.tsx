@@ -7,7 +7,7 @@ const lemon = require('src/assets/lemon.png');
 
 const LittleLemonBody = () => {
   const colorScheme = useColorScheme();
-  const color = colorScheme === 'light' ? '#FFFFFF' : '#333333';
+  const color = colorScheme === 'light' ? '#333333' : '#FFFFFF';
 
   return (
     <ScrollView
