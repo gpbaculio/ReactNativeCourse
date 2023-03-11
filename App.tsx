@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {AppContainer} from 'src/components';
-import ReactNativeScreen from 'src/ReactNativeScrollView';
+import ReactNativeScreen from 'src/ReactNativeFlatlist';
 
 const App = () => {
   return (
