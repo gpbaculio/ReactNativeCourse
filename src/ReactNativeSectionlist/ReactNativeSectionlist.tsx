@@ -7,7 +7,7 @@ import {
   LittleLemonBody,
 } from './components';
 
-const ReactNativeFlatlist = () => {
+const ReactNativeSectionlist = () => {
   return (
     <DynamicView backgroundColor="#333333" flex={1}>
       <LittleLemonHeader />
@@ -17,4 +17,4 @@ const ReactNativeFlatlist = () => {
   );
 };
 
-export default ReactNativeFlatlist;
+export default ReactNativeSectionlist;
