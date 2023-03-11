@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet} from 'react-native';
 import {DynamicText, DynamicTextInput} from 'src/components';
 
 const LittleLemonBody = () => {
-  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
     <ScrollView
@@ -26,8 +26,9 @@ const LittleLemonBody = () => {
       <DynamicTextInput
         borderRadius={3}
         backgroundColor="#FFFFFF"
-        value={firstName}
-        onChangeText={setFirstName}
+        value={email}
+        keyboardType="email-address"
+        onChangeText={setEmail}
         padding="xs"
         mt="s"
         placeholder="Email"
