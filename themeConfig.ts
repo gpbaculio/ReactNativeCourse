@@ -24,6 +24,8 @@ export const spacing = {
   l: 20,
   xL: 24,
   xxL: 28,
+  40: 40,
+  10: 10,
 };
 
 export const colors = {
@@ -31,4 +33,7 @@ export const colors = {
   '#FB61DA': '#FB61DA',
   '#DAFB61': '#DAFB61',
   '#61FBCF': '#61FBCF',
+  '#495E57': '#495E57',
+  '#F4CE14': '#F4CE14',
+  '#000000': '#000000',
 };

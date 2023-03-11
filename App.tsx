@@ -2,11 +2,12 @@ import React from 'react';
 import {View} from 'react-native';
 
 import {AppContainer} from 'src/components';
+import ReactNativeScreen from 'src/ReactNativeScreen/ReactNativeScreen';
 
 const App = () => {
   return (
     <AppContainer>
-      <View>asd</View>
+      <ReactNativeScreen />
     </AppContainer>
   );
 };
