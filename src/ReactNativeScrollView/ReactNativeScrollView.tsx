@@ -9,7 +9,7 @@ import {
 
 const ReactNativeScreen = () => {
   return (
-    <DynamicView backgroundColor="#495E57" flex={1}>
+    <DynamicView backgroundColor="#333333" flex={1}>
       <LittleLemonHeader />
       <LittleLemonBody />
       <LittleLemonFooter />

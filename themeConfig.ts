@@ -38,4 +38,6 @@ export const colors = {
   '#000000': '#000000',
   '#FFFFFF': '#FFFFFF',
   '#EDEFEE': '#EDEFEE',
+  '#EE9972': '#EE9972',
+  '#333333': '#333333',
 };
