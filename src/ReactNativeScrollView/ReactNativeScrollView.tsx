@@ -1,5 +1,5 @@
-import {Text} from 'react-native';
 import React from 'react';
+
 import {DynamicView} from 'src/components';
 import {
   LittleLemonHeader,
