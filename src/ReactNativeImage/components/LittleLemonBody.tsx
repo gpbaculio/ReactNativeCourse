@@ -12,7 +12,7 @@ const LittleLemonBody = () => {
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
-        mt="l">
+        marginVertical="l">
         <DynamicFastImage
           source={lemon}
           width={100}
@@ -21,10 +21,15 @@ const LittleLemonBody = () => {
           borderRadius={16}
           mr="l"
         />
-        <DynamicText fontSize={21} color="#FFFFFF">
+        <DynamicText fontSize={24} color="#FFFFFF">
           Little Lemon
         </DynamicText>
       </DynamicView>
+      <DynamicText textAlign="center" fontSize={21} color="#FFFFFF">
+        Little Lemon is a charming neighborhood bistro that serves simple food
+        and classic cocktails in a lively but casual environment. We would love
+        to hear your experience with us!
+      </DynamicText>
     </ScrollView>
   );
 };
