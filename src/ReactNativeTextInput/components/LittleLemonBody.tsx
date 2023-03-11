@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
-import {DynamicText, DynamicView} from 'src/components';
+import {DynamicText, DynamicTextInput} from 'src/components';
 
 const LittleLemonBody = () => {
+  const [firstName, setFirstName] = useState('');
   return (
     <ScrollView
       indicatorStyle="white"
@@ -15,8 +16,7 @@ const LittleLemonBody = () => {
         Welcome to Little Lemon
       </DynamicText>
       <DynamicText
-        fontSize={38}
-        padding="l"
+        fontSize={18}
         marginVertical="xs"
         textAlign="center"
         color="#EDEFEE">
@@ -24,6 +24,15 @@ const LittleLemonBody = () => {
         and classic cocktails in a lively but casual environment. We would love
         to hear more about your experience with us!
       </DynamicText>
+      <DynamicTextInput
+        borderRadius={3}
+        backgroundColor="#FFFFFF"
+        value={firstName}
+        onChangeText={setFirstName}
+        padding="xs"
+        mt="s"
+        placeholder="First Name"
+      />
     </ScrollView>
   );
 };
