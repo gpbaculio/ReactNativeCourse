@@ -4,6 +4,7 @@ import {DynamicText, DynamicTextInput} from 'src/components';
 
 const LittleLemonBody = () => {
   const [firstName, setFirstName] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <ScrollView
       indicatorStyle="white"
@@ -20,9 +21,7 @@ const LittleLemonBody = () => {
         marginVertical="xs"
         textAlign="center"
         color="#EDEFEE">
-        Little Lemon is a charming neighborhood bistro that serves simple food
-        and classic cocktails in a lively but casual environment. We would love
-        to hear more about your experience with us!
+        Login to continue
       </DynamicText>
       <DynamicTextInput
         borderRadius={3}
@@ -31,7 +30,17 @@ const LittleLemonBody = () => {
         onChangeText={setFirstName}
         padding="xs"
         mt="s"
-        placeholder="First Name"
+        placeholder="Email"
+      />
+      <DynamicTextInput
+        borderRadius={3}
+        backgroundColor="#FFFFFF"
+        value={password}
+        onChangeText={setPassword}
+        padding="xs"
+        mt="s"
+        secureTextEntry
+        placeholder="Password"
       />
     </ScrollView>
   );
