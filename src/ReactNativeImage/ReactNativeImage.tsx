@@ -7,7 +7,7 @@ import {
   LittleLemonBody,
 } from './components';
 
-const ReactNativeTextInput = () => {
+const ReactNativeImage = () => {
   return (
     <DynamicView backgroundColor="#333333" flex={1}>
       <LittleLemonHeader />
@@ -17,4 +17,4 @@ const ReactNativeTextInput = () => {
   );
 };
 
-export default ReactNativeTextInput;
+export default ReactNativeImage;

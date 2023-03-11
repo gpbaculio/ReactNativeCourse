@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {AppContainer} from 'src/components';
-import ReactNativeScreen from 'src/ReactNativeTextInput';
+import ReactNativeScreen from 'src/ReactNativeImage';
 
 const App = () => {
   return (
