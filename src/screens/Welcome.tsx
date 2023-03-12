@@ -1,9 +1,21 @@
 import {ScrollView, StyleSheet} from 'react-native';
 
-import {DynamicFastImage, DynamicText, DynamicView} from 'src/components';
+import {
+  DynamicFastImage,
+  DynamicPressable,
+  DynamicText,
+  DynamicView,
+} from 'src/components';
 import {logo} from 'src/assets';
+import {useDefaultNavigation} from 'src/navigation/hooks';
 
 export default function WelcomeScreen() {
+  const navigation = useDefaultNavigation();
+
+  const onGoBackPress = () => {
+    navigation.goBack();
+  };
+
   return (
     <ScrollView style={styles.container}>
       <DynamicView
@@ -41,6 +53,15 @@ export default function WelcomeScreen() {
         and classic cocktails in a lively but casual environment. We would love
         to hear your experience with us!
       </DynamicText>
+      <DynamicPressable
+        alignSelf="center"
+        backgroundColor="#EE9972"
+        paddingHorizontal="xL"
+        paddingVertical="m"
+        borderRadius={8}
+        onPress={onGoBackPress}>
+        <DynamicText fontWeight="600">Go back</DynamicText>
+      </DynamicPressable>
     </ScrollView>
   );
 }
