@@ -1,9 +1,9 @@
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-import {StackNavigatorParamList} from '../Navigation';
+import {BottomTabNavigatorParamList} from '../Navigation';
 
-type NavigationProps = NativeStackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = BottomTabNavigationProp<BottomTabNavigatorParamList>;
 
 const useDefaultNavigation = () => {
   const navigation = useNavigation<NavigationProps>();

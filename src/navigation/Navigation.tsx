@@ -1,21 +1,43 @@
 import React from 'react';
 
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {Login, Welcome} from 'src/screens';
 import {LittleLemonHeader} from 'src/components';
 
-export type StackNavigatorParamList = {Welcome: undefined; Login: undefined};
+export type BottomTabNavigatorParamList = {
+  Welcome: undefined;
+  Login: undefined;
+};
 
-const Stack = createNativeStackNavigator<StackNavigatorParamList>();
+const BottomTab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
-const options = {header: LittleLemonHeader};
+const commonOptions = {header: LittleLemonHeader};
 
 const Navigation = () => (
-  <Stack.Navigator initialRouteName="Login">
-    <Stack.Screen name="Welcome" options={options} component={Welcome} />
-    <Stack.Screen name="Login" options={options} component={Login} />
-  </Stack.Navigator>
+  <BottomTab.Navigator initialRouteName="Login">
+    <BottomTab.Screen
+      name="Login"
+      options={{
+        ...commonOptions,
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="bell" color={color} size={size} />
+        ),
+      }}
+      component={Login}
+    />
+    <BottomTab.Screen
+      name="Welcome"
+      options={{
+        ...commonOptions,
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="home" color={color} size={size} />
+        ),
+      }}
+      component={Welcome}
+    />
+  </BottomTab.Navigator>
 );
 
 export default Navigation;
