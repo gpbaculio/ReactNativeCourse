@@ -6,14 +6,14 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {LittleLemonHeader} from 'src/components';
 import {Login, Welcome} from 'src/screens';
 
-export type BottomTabNavigatorParamList = {
+export type DrawerNavigatorParamList = {
   Welcome: undefined;
   Login: undefined;
 };
 
-const BottomTab = createDrawerNavigator<BottomTabNavigatorParamList>();
+const BottomTab = createDrawerNavigator<DrawerNavigatorParamList>();
 
-const options = {header: LittleLemonHeader};
+const options = {header: () => <LittleLemonHeader />};
 
 const Navigation = () => (
   <BottomTab.Navigator initialRouteName="Login">

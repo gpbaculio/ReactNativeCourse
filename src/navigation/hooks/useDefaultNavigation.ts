@@ -1,9 +1,9 @@
 import {useNavigation} from '@react-navigation/native';
-import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {DrawerNavigationProp} from '@react-navigation/drawer';
 
-import {BottomTabNavigatorParamList} from '../Navigation';
+import {DrawerNavigatorParamList} from '../Navigation';
 
-type NavigationProps = BottomTabNavigationProp<BottomTabNavigatorParamList>;
+type NavigationProps = DrawerNavigationProp<DrawerNavigatorParamList>;
 
 const useDefaultNavigation = () => {
   const navigation = useNavigation<NavigationProps>();

@@ -1,6 +1,6 @@
 import React from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 
 import restyleTheme from 'restyleTheme';
