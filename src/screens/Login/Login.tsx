@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {DynamicText, DynamicTextInput} from 'src/components';
+import {DynamicPressable, DynamicText, DynamicTextInput} from 'src/components';
 import LoginContainer from './LoginContainer';
 
 const Login = () => {
@@ -43,6 +43,15 @@ const Login = () => {
         secureTextEntry
         placeholder="Password"
       />
+      <DynamicPressable
+        mt="l"
+        backgroundColor="#EE9972"
+        alignSelf="center"
+        paddingVertical="s"
+        paddingHorizontal="xL"
+        borderRadius={7}>
+        <DynamicText fontWeight="600">Log in</DynamicText>
+      </DynamicPressable>
     </LoginContainer>
   );
 };
