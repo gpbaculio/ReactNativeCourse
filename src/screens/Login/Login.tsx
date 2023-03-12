@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import {DynamicPressable, DynamicText, DynamicTextInput} from 'src/components';
 import {useDefaultNavigation} from 'src/navigation/hooks';
 import LoginContainer from './LoginContainer';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {colors} from 'themeConfig';
 
 const Login = () => {
   const navigation = useDefaultNavigation();
@@ -55,9 +57,18 @@ const Login = () => {
         alignSelf="center"
         paddingVertical="s"
         paddingHorizontal="xL"
+        flexDirection="row"
+        alignItems="center"
         borderRadius={7}
         onPress={onLoginPress}>
-        <DynamicText fontWeight="600">Log in</DynamicText>
+        <DynamicText fontWeight="600" color="#333333">
+          Log in
+        </DynamicText>
+        <MaterialCommunityIcons
+          name="login"
+          color={colors['#333333']}
+          size={23}
+        />
       </DynamicPressable>
     </LoginContainer>
   );
