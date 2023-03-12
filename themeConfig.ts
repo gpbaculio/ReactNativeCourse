@@ -6,6 +6,11 @@ export const fastImageVariants = {
 
 export const buttonVariants = {
   defaults: {},
+  buttonPrimary: {
+    backgroundColor: '#495E57',
+    borderRadius: 8,
+    paddingVertical: 'm',
+  },
 };
 
 export const containerVariants = {
