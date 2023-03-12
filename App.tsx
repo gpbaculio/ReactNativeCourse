@@ -1,12 +1,12 @@
 import React from 'react';
 
 import {AppContainer} from 'src/components';
-import ReactNativeScreen from 'src/ReactNativeTextInput';
+import Navigation from 'src/navigation';
 
 const App = () => {
   return (
     <AppContainer>
-      <ReactNativeScreen />
+      <Navigation />
     </AppContainer>
   );
 };

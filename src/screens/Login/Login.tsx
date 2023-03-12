@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
-import {DynamicText, DynamicTextInput} from 'src/components';
 
-const LittleLemonBody = () => {
+import {DynamicText, DynamicTextInput} from 'src/components';
+import LoginContainer from './LoginContainer';
+
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   return (
-    <ScrollView
-      indicatorStyle="white"
-      contentContainerStyle={styles.contentContainer}>
+    <LoginContainer>
       <DynamicText
         textAlign="center"
         fontSize={30}
@@ -43,12 +43,8 @@ const LittleLemonBody = () => {
         secureTextEntry
         placeholder="Password"
       />
-    </ScrollView>
+    </LoginContainer>
   );
 };
 
-export default LittleLemonBody;
-
-const styles = StyleSheet.create({
-  contentContainer: {paddingHorizontal: 40, flexGrow: 1},
-});
+export default Login;
