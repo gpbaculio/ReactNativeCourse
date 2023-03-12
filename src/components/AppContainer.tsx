@@ -4,13 +4,16 @@ import {StyleSheet} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 
 import restyleTheme from 'restyleTheme';
+import {NavigationContainer} from '@react-navigation/native';
 
 type AppContainerProps = {children: React.ReactNode};
 
 const AppContainer = ({children}: AppContainerProps) => (
-  <GestureHandlerRootView style={styles.container}>
-    <ThemeProvider theme={restyleTheme}>{children}</ThemeProvider>
-  </GestureHandlerRootView>
+  <NavigationContainer>
+    <GestureHandlerRootView style={styles.container}>
+      <ThemeProvider theme={restyleTheme}>{children}</ThemeProvider>
+    </GestureHandlerRootView>
+  </NavigationContainer>
 );
 
 export default AppContainer;
