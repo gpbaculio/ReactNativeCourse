@@ -1,43 +1,37 @@
 import React from 'react';
 
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {LittleLemonHeader} from 'src/components';
-import {Login, Welcome} from 'src/screens';
+import {Subscribe, Welcome} from 'src/screens';
 
-export type DrawerNavigatorParamList = {
+export type NativeStackNavigatorParamList = {
   Welcome: undefined;
-  Login: undefined;
+  Subscribe: undefined;
 };
 
-const BottomTab = createDrawerNavigator<DrawerNavigatorParamList>();
+const NativeStack = createNativeStackNavigator<NativeStackNavigatorParamList>();
 
 const options = {header: () => <LittleLemonHeader />};
 
 const Navigation = () => (
-  <BottomTab.Navigator initialRouteName="Login">
-    <BottomTab.Screen
-      name="Login"
-      options={{
-        ...options,
-        drawerIcon: ({color, size}) => (
-          <MaterialCommunityIcons name="login" color={color} size={size} />
-        ),
-      }}
-      component={Login}
-    />
-    <BottomTab.Screen
+  <NativeStack.Navigator initialRouteName="Welcome">
+    <NativeStack.Screen
       name="Welcome"
       options={{
         ...options,
-        drawerIcon: ({color, size}) => (
-          <MaterialCommunityIcons name="account" color={color} size={size} />
-        ),
       }}
       component={Welcome}
     />
-  </BottomTab.Navigator>
+    <NativeStack.Screen
+      name="Subscribe"
+      options={{
+        ...options,
+      }}
+      component={Subscribe}
+    />
+  </NativeStack.Navigator>
 );
 
 export default Navigation;

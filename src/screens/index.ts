@@ -1,4 +1,4 @@
-import Login from './Login';
+import Subscribe from './Subscribe';
 import Welcome from './Welcome';
 
-export {Login, Welcome};
+export {Subscribe, Welcome};

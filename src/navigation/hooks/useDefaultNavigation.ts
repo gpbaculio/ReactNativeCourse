@@ -1,9 +1,9 @@
 import {useNavigation} from '@react-navigation/native';
-import {DrawerNavigationProp} from '@react-navigation/drawer';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-import {DrawerNavigatorParamList} from '../Navigation';
+import {NativeStackNavigatorParamList} from '../Navigation';
 
-type NavigationProps = DrawerNavigationProp<DrawerNavigatorParamList>;
+type NavigationProps = NativeStackNavigationProp<NativeStackNavigatorParamList>;
 
 const useDefaultNavigation = () => {
   const navigation = useNavigation<NavigationProps>();
