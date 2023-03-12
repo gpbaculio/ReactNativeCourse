@@ -1,11 +1,17 @@
 import React, {useState} from 'react';
 
 import {DynamicPressable, DynamicText, DynamicTextInput} from 'src/components';
+import {useDefaultNavigation} from 'src/navigation/hooks';
 import LoginContainer from './LoginContainer';
 
 const Login = () => {
+  const navigation = useDefaultNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const onLoginPress = () => {
+    navigation.navigate('Welcome');
+  };
 
   return (
     <LoginContainer>
@@ -49,7 +55,8 @@ const Login = () => {
         alignSelf="center"
         paddingVertical="s"
         paddingHorizontal="xL"
-        borderRadius={7}>
+        borderRadius={7}
+        onPress={onLoginPress}>
         <DynamicText fontWeight="600">Log in</DynamicText>
       </DynamicPressable>
     </LoginContainer>
