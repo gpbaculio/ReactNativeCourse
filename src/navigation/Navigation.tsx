@@ -5,6 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import {LittleLemonHeader} from 'src/components';
 import {Subscribe, Welcome} from 'src/screens';
+import {SubscribeHeader, WelcomeHeader} from './components';
 
 export type NativeStackNavigatorParamList = {
   Welcome: undefined;
@@ -13,21 +14,19 @@ export type NativeStackNavigatorParamList = {
 
 const NativeStack = createNativeStackNavigator<NativeStackNavigatorParamList>();
 
-const options = {header: () => <LittleLemonHeader />};
-
 const Navigation = () => (
   <NativeStack.Navigator initialRouteName="Welcome">
     <NativeStack.Screen
       name="Welcome"
       options={{
-        ...options,
+        header: () => <WelcomeHeader />,
       }}
       component={Welcome}
     />
     <NativeStack.Screen
       name="Subscribe"
       options={{
-        ...options,
+        header: () => <SubscribeHeader />,
       }}
       component={Subscribe}
     />

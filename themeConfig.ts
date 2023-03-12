@@ -1,5 +1,3 @@
-import {Platform} from 'react-native';
-
 export const fastImageVariants = {
   defaults: {},
 };
@@ -7,30 +5,9 @@ export const fastImageVariants = {
 export const buttonVariants = {
   defaults: {},
   buttonPrimary: {
-    backgroundColor: '#495E57',
     borderRadius: 8,
     paddingVertical: 'm',
   },
-};
-
-export const containerVariants = {
-  defaults: {},
-};
-
-export const textVariants = {
-  defaults: {},
-};
-
-export const spacing = {
-  xxs: 4,
-  xs: 8,
-  s: 12,
-  m: 16,
-  l: 20,
-  xL: 24,
-  xxL: 28,
-  40: 40,
-  10: 10,
 };
 
 export const colors = {
@@ -45,4 +22,34 @@ export const colors = {
   '#EDEFEE': '#EDEFEE',
   '#EE9972': '#EE9972',
   '#333333': '#333333',
+};
+
+export const containerVariants = {
+  defaults: {},
+  header: {
+    backgroundColor: colors['#495E57'],
+    paddingTop: 40,
+    paddingBottom: 'l',
+  },
+};
+
+export const textVariants = {
+  defaults: {},
+  header: {
+    color: colors['#FFFFFF'],
+    fontSize: 24,
+    fontWeight: '600',
+  },
+};
+
+export const spacing = {
+  xxs: 4,
+  xs: 8,
+  s: 12,
+  m: 16,
+  l: 20,
+  xL: 24,
+  xxL: 28,
+  40: 40,
+  10: 10,
 };
