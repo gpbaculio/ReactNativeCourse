@@ -5,6 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import {Login, Welcome} from 'src/screens';
 import {LittleLemonHeader} from 'src/components';
+import {colors} from 'themeConfig';
 
 export type BottomTabNavigatorParamList = {
   Welcome: undefined;
@@ -16,7 +17,15 @@ const BottomTab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 const commonOptions = {header: LittleLemonHeader};
 
 const Navigation = () => (
-  <BottomTab.Navigator initialRouteName="Login">
+  <BottomTab.Navigator
+    initialRouteName="Login"
+    screenOptions={{
+      tabBarStyle: {
+        backgroundColor: colors['#EE9972'],
+      },
+      tabBarActiveTintColor: colors['#000000'],
+      tabBarInactiveTintColor: colors['#333333'],
+    }}>
     <BottomTab.Screen
       name="Login"
       options={{
