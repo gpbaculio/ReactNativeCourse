@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {LittleLemonHeader} from 'src/components';
@@ -11,7 +11,7 @@ export type BottomTabNavigatorParamList = {
   Login: undefined;
 };
 
-const BottomTab = createBottomTabNavigator<BottomTabNavigatorParamList>();
+const BottomTab = createDrawerNavigator<BottomTabNavigatorParamList>();
 
 const options = {header: LittleLemonHeader};
 
@@ -21,7 +21,7 @@ const Navigation = () => (
       name="Login"
       options={{
         ...options,
-        tabBarIcon: ({color, size}) => (
+        drawerIcon: ({color, size}) => (
           <MaterialCommunityIcons name="login" color={color} size={size} />
         ),
       }}
@@ -31,7 +31,7 @@ const Navigation = () => (
       name="Welcome"
       options={{
         ...options,
-        tabBarIcon: ({color, size}) => (
+        drawerIcon: ({color, size}) => (
           <MaterialCommunityIcons name="account" color={color} size={size} />
         ),
       }}
