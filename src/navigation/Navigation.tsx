@@ -13,19 +13,15 @@ export type NativeStackNavigatorParamList = {
 const NativeStack = createNativeStackNavigator<NativeStackNavigatorParamList>();
 
 const Navigation = () => (
-  <NativeStack.Navigator initialRouteName="Subscribe">
+  <NativeStack.Navigator initialRouteName="Welcome">
     <NativeStack.Screen
       name="Welcome"
-      options={{
-        header: WelcomeHeader,
-      }}
+      options={{header: WelcomeHeader}}
       component={Welcome}
     />
     <NativeStack.Screen
       name="Subscribe"
-      options={{
-        header: () => <SubscribeHeader />,
-      }}
+      options={{header: SubscribeHeader}}
       component={Subscribe}
     />
   </NativeStack.Navigator>
