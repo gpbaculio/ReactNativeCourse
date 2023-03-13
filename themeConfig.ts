@@ -2,14 +2,6 @@ export const fastImageVariants = {
   defaults: {},
 };
 
-export const buttonVariants = {
-  defaults: {},
-  buttonPrimary: {
-    borderRadius: 8,
-    paddingVertical: 'm',
-  },
-};
-
 export const colors = {
   '#61DAFB': '#61DAFB',
   '#FB61DA': '#FB61DA',
@@ -22,6 +14,26 @@ export const colors = {
   '#EDEFEE': '#EDEFEE',
   '#EE9972': '#EE9972',
   '#333333': '#333333',
+};
+
+export const spacing = {
+  xxs: 4,
+  xs: 8,
+  s: 12,
+  m: 16,
+  l: 20,
+  xL: 24,
+  xxL: 28,
+  40: 40,
+  10: 10,
+};
+
+export const buttonVariants = {
+  defaults: {},
+  buttonPrimary: {
+    borderRadius: spacing['xs'],
+    paddingVertical: 'm',
+  },
 };
 
 export const containerVariants = {
@@ -39,17 +51,6 @@ export const textVariants = {
     color: colors['#FFFFFF'],
     fontSize: 24,
     fontWeight: '600',
+    paddingTop: 's',
   },
-};
-
-export const spacing = {
-  xxs: 4,
-  xs: 8,
-  s: 12,
-  m: 16,
-  l: 20,
-  xL: 24,
-  xxL: 28,
-  40: 40,
-  10: 10,
 };
