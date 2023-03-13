@@ -1,9 +1,7 @@
 import React from 'react';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {LittleLemonHeader} from 'src/components';
 import {Subscribe, Welcome} from 'src/screens';
 import {SubscribeHeader, WelcomeHeader} from './components';
 
@@ -15,11 +13,11 @@ export type NativeStackNavigatorParamList = {
 const NativeStack = createNativeStackNavigator<NativeStackNavigatorParamList>();
 
 const Navigation = () => (
-  <NativeStack.Navigator initialRouteName="Welcome">
+  <NativeStack.Navigator initialRouteName="Subscribe">
     <NativeStack.Screen
       name="Welcome"
       options={{
-        header: () => <WelcomeHeader />,
+        header: WelcomeHeader,
       }}
       component={Welcome}
     />
