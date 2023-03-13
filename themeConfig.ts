@@ -14,6 +14,7 @@ export const colors = {
   '#EDEFEE': '#EDEFEE',
   '#EE9972': '#EE9972',
   '#333333': '#333333',
+  red: 'red',
 };
 
 export const spacing = {
