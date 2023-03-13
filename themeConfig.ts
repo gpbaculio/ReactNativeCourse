@@ -26,13 +26,16 @@ export const spacing = {
   xxL: 28,
   40: 40,
   10: 10,
+  auto: 'auto',
 };
 
 export const buttonVariants = {
   defaults: {},
   buttonPrimary: {
     borderRadius: spacing['xs'],
-    paddingVertical: 'm',
+    paddingVertical: 's',
+    backgroundColor: colors['#495E57'],
+    alignItems: 'center',
   },
 };
 
@@ -43,6 +46,10 @@ export const containerVariants = {
     paddingTop: 40,
     paddingBottom: 'l',
   },
+  container: {
+    flex: 1,
+    paddingHorizontal: 'xxL',
+  },
 };
 
 export const textVariants = {
@@ -52,5 +59,10 @@ export const textVariants = {
     fontSize: 24,
     fontWeight: '600',
     paddingTop: 's',
+  },
+  buttonText: {
+    color: colors['#FFFFFF'],
+    fontSize: 16,
+    fontWeight: '500',
   },
 };
