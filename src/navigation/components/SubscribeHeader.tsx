@@ -1,30 +1,41 @@
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {DynamicPressable, DynamicText, DynamicView} from 'src/components';
-
+import {useDefaultNavigation} from '../hooks';
 import {colors} from 'themeConfig';
 
 const LittleLemonHeader = () => {
+  const navigation = useDefaultNavigation();
+
+  const onLeftArrowPress = () => {
+    navigation.goBack();
+  };
+
   return (
-    <DynamicView variant="header">
+    <DynamicView
+      variant="header"
+      paddingHorizontal="s"
+      flexDirection="row"
+      alignItems="center"
+      justifyContent="center">
       <DynamicView
         alignSelf="center"
         flexDirection="row"
         flex={1}
         alignItems="center"
         justifyContent="center">
-        <DynamicPressable position="absolute" left={0}>
+        <DynamicPressable
+          pt="s"
+          position="absolute"
+          left={0}
+          onPress={onLeftArrowPress}>
           <MaterialCommunityIcons
-            name="menu"
-            size={24}
-            color={colors['#333333']}
+            name="chevron-left"
+            size={36}
+            color={colors['#FFFFFF']}
           />
         </DynamicPressable>
-        <DynamicView>
-          <DynamicText color="#000000" fontSize={30} textAlign="center">
-            Little Lemonssss
-          </DynamicText>
-        </DynamicView>
+        <DynamicText variant="header">Little Lemonssss</DynamicText>
       </DynamicView>
     </DynamicView>
   );
