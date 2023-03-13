@@ -35,7 +35,7 @@ const LittleLemonHeader = () => {
             color={colors['#FFFFFF']}
           />
         </DynamicPressable>
-        <DynamicText variant="header">Little Lemonssss</DynamicText>
+        <DynamicText variant="header">Subscribe</DynamicText>
       </DynamicView>
     </DynamicView>
   );
