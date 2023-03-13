@@ -10,7 +10,7 @@ import {
 
 import {littleLemonLogo} from 'src/assets';
 
-import {useDefaultNavigation} from 'src/navigation/hooks';
+import {useDefaultNavigation} from 'src/navigators/hooks';
 
 const {width, height} = Dimensions.get('window');
 

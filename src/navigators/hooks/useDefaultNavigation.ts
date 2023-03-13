@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-import {NativeStackNavigatorParamList} from '../Navigation';
+import {NativeStackNavigatorParamList} from '../RootNavigator';
 
 type NavigationProps = NativeStackNavigationProp<NativeStackNavigatorParamList>;
 

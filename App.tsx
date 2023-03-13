@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 
 import {AppContainer} from 'src/components';
-import Navigation from 'src/navigation';
+import Navigation from 'src/navigators';
 
 const App = () => {
   return (
