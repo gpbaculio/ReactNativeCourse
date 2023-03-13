@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Dimensions,
   Platform,
+  Alert,
 } from 'react-native';
 
 import * as Yup from 'yup';
@@ -31,12 +32,13 @@ const Subscribe = () => {
     control,
     handleSubmit,
     formState: {errors},
-    getValues,
   } = useForm<SubscribeFormData>({resolver, mode: 'onChange'});
 
-  const {email} = getValues();
-
-  const onSubmit = (data: SubscribeFormData) => {};
+  const onSubmit = (data: SubscribeFormData) => {
+    if (data.email) {
+      Alert.alert('Thanks for subscribing, stay tuned!');
+    }
+  };
 
   const isDisabled = !!errors?.email?.message;
 
